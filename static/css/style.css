@@ -1,0 +1,44 @@
+body {
+    font-family: "PT Mono", Arial;
+    margin: 0;
+    padding-top: 30px;
+    background-color: #edebe2;
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    height: 100vh; /* Makes the body take up the full viewport height */
+}
+
+header {
+    padding: 20px;
+    text-align: left; /* Ensures text inside stays left-aligned */
+    max-width: 675px; /* Limits the width of the content */
+    width: 90%; /* Allows it to be responsive */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #4E3524;
+    padding-bottom: 30px;
+    border-bottom: 5px dashed #4E3524; /* Adds a dotted line */
+    padding-bottom: 10px; /* Adds spacing below the dotted line */
+    margin-bottom: 20px; /* Adds space between the line and the paragraphs */
+}
+
+header p {
+    margin: 10px 0;
+    color: #4E3524;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #4E3524;
+    padding-bottom: 30px;
+    margin-top: 35px;
+    border-bottom: 5px dashed #4E3524; /* Adds a dotted line */
+    padding-bottom: 10px; /* Adds spacing below the dotted line */
+    margin-bottom: 20px; /* Adds space between the line and the paragraphs */
+}

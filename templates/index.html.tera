@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
     <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>{{ title }}</h1>
-        <p>{{ description }}</p>
-    </header>
-    <main>
-        <p>Welcome to my portfolio! Here’s a bit about me and my work.</p>
-        <a href="/static/resume.pdf" class="button">View My Résumé</a>
-    </main>
+<header>
+    <h1>{{ title }}</h1>
+    {% for paragraph in description %}
+        <p>{{ paragraph }}</p>
+    {% endfor %}
+    <h2>{{ projects }}</h2>
+</header>
 </body>
 </html>
