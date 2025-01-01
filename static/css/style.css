@@ -42,3 +42,50 @@ header h2 {
     padding-bottom: 10px; /* Adds spacing below the dotted line */
     margin-bottom: 20px; /* Adds space between the line and the paragraphs */
 }
+
+header ul {
+    list-style-type: none; /* Removes default bullet points */
+    padding: 0;
+    margin: 20px 0;
+}
+
+header ul li {
+    font-size: 1.2em;
+    color: #4E3524;
+    margin: 5px 0;
+    padding-left: 20px; /* Adds space for the custom bullet */
+    position: relative; /* Required for the custom bullet */
+}
+
+header ul li::before {
+    content: "*"; /* Adds a custom bullet point */
+    font-weight: bold; /* Makes the bullet bold */
+    color: #4E3524; /* Matches the text color */
+    position: absolute; /* Position it relative to the li */
+    left: 0; /* Aligns it to the left */
+}
+
+header ul li a {
+    color: #4E3524;
+    text-decoration: none; /* Removes underline */
+    transition: all 0.3s ease; /* Smooth transition on hover */
+}
+
+header ul li a:hover {
+    text-decoration: underline; /* Adds underline on hover */
+    font-weight: bold; /* Bolds the text on hover */
+}
+
+.resume-link {
+    text-decoration: underline; /* Removes underline */
+    transition: all 0.3s ease; /* Smooth transition on hover */
+    color: #4E3524; /* Optional: Match the text color */
+}
+
+.resume-link .no-underline {
+    text-decoration: none; /* Prevents underline for the icon */
+}
+
+.resume-link:hover {
+    font-weight: bold; /* Bolds the text on hover */
+}
