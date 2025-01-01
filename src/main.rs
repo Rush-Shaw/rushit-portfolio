@@ -23,6 +23,7 @@ fn index() -> Template {
         socials: "reach out to me 📲",
         projects: "cool stuff i've made 👨🏽‍💻",
         description: description, // Pass the preprocessed description
+        footer: "made in rust by rushit",
         description_socials: vec![ 
             ("email --> rushshaw9@gmail.com", "mailto:rushshaw9@gmail.com"),
             ("github --> /rush-shaw", "https://github.com/Rush-Shaw"),

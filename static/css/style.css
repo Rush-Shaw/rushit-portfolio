@@ -2,7 +2,7 @@ body {
     font-family: "PT Mono", Arial;
     margin: 0;
     padding-top: 30px;
-    background-color: #edebe2;
+    background-color: #fff5e0;
     display: flex;
     justify-content: center; /* Centers content horizontally */
     height: 100vh; /* Makes the body take up the full viewport height */
@@ -88,4 +88,12 @@ header ul li a:hover {
 
 .resume-link:hover {
     font-weight: bold; /* Bolds the text on hover */
+}
+
+.footer {
+    color: #4E3524; /* Example color */
+    font-weight: bold; /* Bolds the text on hover */
+    text-align: center; /* Center align text */
+    margin-top: 50px; /* Add spacing above */
+    padding-bottom: 30px; /* Add padding to ensure spacing below */
 }
