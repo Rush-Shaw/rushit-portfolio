@@ -4,9 +4,11 @@ body {
     padding-top: 30px;
     background-color: #fff5e0;
     display: flex;
-    justify-content: center; /* Centers content horizontally */
-    height: 100vh; /* Makes the body take up the full viewport height */
-}
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+  }
 
 header {
     padding: 20px;
@@ -97,3 +99,39 @@ header ul li a:hover {
     margin-top: 50px; /* Add spacing above */
     padding-bottom: 30px; /* Add padding to ensure spacing below */
 }
+
+.floating-astronaut {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    background: url('/static/astronaut.png') no-repeat center center;
+    background-size: contain;
+    z-index: -1;
+    opacity: 0.7;
+    transform-origin: center center;
+    animation: float 90s infinite cubic-bezier(0.42, 0, 0.58, 1);
+    pointer-events: none;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    20% {
+      transform: translate(calc(-50% + 400px), calc(-50% - 300px)) rotate(180deg);
+    }
+    40% {
+      transform: translate(calc(-50% - 300px), calc(-50% + 200px)) rotate(360deg);
+    }
+    60% {
+      transform: translate(calc(-50% + 200px), calc(-50% + 300px)) rotate(540deg);
+    }
+    80% {
+      transform: translate(calc(-50% - 400px), calc(-50% - 200px)) rotate(720deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(1080deg);
+    }
+  }
