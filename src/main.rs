@@ -3,8 +3,6 @@ extern crate rocket;
 
 use rocket_dyn_templates::{Template, context};
 use rocket::fs::{FileServer, NamedFile, relative};
-use std::process::Command;
-use std::path::Path;
 
 #[get("/")]
 fn index() -> Template {
@@ -40,27 +38,8 @@ fn index() -> Template {
 
 #[get("/resume")]
 async fn render_resume() -> Option<NamedFile> {
-    let latex_dir = Path::new("latex");
-    let tex_file = latex_dir.join("resume.tex");
-    let output_pdf = latex_dir.join("resume.pdf");
-
-    // Compile LaTeX file into a PDF using pdflatex
-    let result = Command::new("pdflatex")
-        .current_dir(latex_dir) // Run pdflatex in the latex/ directory
-        .arg("-interaction=nonstopmode") // Prevent interactive prompts
-        .arg("-output-directory")
-        .arg(latex_dir) // Output PDF in the latex directory
-        .arg(&tex_file) // Input LaTeX file
-        .output();
-
-    // Check if the compilation succeeded
-    if result.is_err() || !output_pdf.exists() {
-        eprintln!("Failed to compile LaTeX file: {:?}", result);
-        return None;
-    }
-
-    // Serve the generated PDF
-    NamedFile::open(output_pdf).await.ok()
+    // Serve the precompiled resume.pdf directly
+    NamedFile::open("static/resume.pdf").await.ok()
 }
 
 #[launch]
