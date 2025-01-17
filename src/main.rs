@@ -29,6 +29,7 @@ fn index() -> Template {
             ("instagram --> /rush.photography9", "https://www.instagram.com/rush.photography9/"),
         ],
         description_projects: vec![ 
+            ("chained simple --> decentralizing financial docs to keep them secure", "https://github.com/zayedu/ChainedSimple"),
             ("vinculum --> bridging the hybrid and in-person workforce", "https://github.com/scythemenace/Vinculum"),
             ("grades automator --> aiding teachers dish out grades faster", "https://github.com/Rush-Shaw/GradesAutomater"),
             ("instagram-followers --> catching people that don't follow back", "https://github.com/Rush-Shaw/Instagram-Followers"),
